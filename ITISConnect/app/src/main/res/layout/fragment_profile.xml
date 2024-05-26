@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.ProfileFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_avatar"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/profile_icon"
+                    android:scaleType="centerCrop"
+                    android:elevation="4dp"
+                    android:padding="4dp"
+                    android:layout_gravity="center" />
+
+                <ImageView
+                    android:id="@+id/edit_icon_profile"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_alignBottom="@id/profile_avatar"
+                    android:layout_alignEnd="@id/profile_avatar"
+                    android:src="@drawable/edit_post_icon" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/profile_fullname"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tên Người Dùng"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/profile_email"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="email@example.com"
+                android:textSize="14sp"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/profile_position"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bí thư"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/profile_department"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ban Truyền thông"
+                android:textStyle="italic"
+                android:textSize="12sp"
+                android:layout_marginTop="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal" >
+
+                <Button
+                    android:id="@+id/scan_qr_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="20dp"
+                    android:text="Quét QR"
+                    android:layout_marginTop="32dp"
+                    android:backgroundTint="#2196F3"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/events_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Sự kiện"
+                    android:layout_marginTop="32dp"
+                    android:backgroundTint="#FF5722"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/logout_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Đăng xuất"
+                android:layout_marginTop="32dp"
+                android:backgroundTint="#F65050"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

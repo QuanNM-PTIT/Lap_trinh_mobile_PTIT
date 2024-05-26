@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".views.TaskDetailViewActivity">
+
+    <ScrollView
+        android:id="@+id/task_detail_view_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <EditText
+                android:id="@+id/task_title_detail_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tiêu đề"
+                android:padding="16dp"
+                android:textColor="@android:color/white"
+                android:textColorHint="@drawable/text_color_disable"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/description_task_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/edit_text_background_task_view"
+                android:gravity="top"
+                android:hint="Mô tả..."
+                android:inputType="textMultiLine"
+                android:minLines="4"
+                android:padding="16dp"
+                android:textColor="@drawable/text_color_disable"
+                android:textColorHint="#949494"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/start_date_edit_task_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ngày bắt đầu"
+                android:inputType="date"
+                android:padding="16dp"
+                android:textColor="@drawable/text_color_disable"
+                android:textColorHint="@color/white"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/due_date_edit_task_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ngaày kết thúc"
+                android:inputType="date"
+                android:padding="16dp"
+                android:textColor="@drawable/text_color_disable"
+                android:textColorHint="@color/white"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/assignee_spinner_task"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@android:drawable/btn_dropdown"
+                android:padding="16dp"
+                android:popupBackground="@color/white"
+                android:spinnerMode="dropdown" />
+
+            <Spinner
+                android:id="@+id/status_task_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@android:drawable/btn_dropdown"
+                android:padding="16dp"
+                android:popupBackground="@color/white"
+                android:spinnerMode="dropdown" />
+
+            <EditText
+                android:id="@+id/comment_edit_task_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/edit_text_background_task_view"
+                android:gravity="top"
+                android:hint="Bằng chứng..."
+                android:inputType="textMultiLine"
+                android:minLines="4"
+                android:padding="16dp"
+                android:textColor="@drawable/text_color_disable"
+                android:textColorHint="#949494"
+                android:textSize="16sp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+                <Button
+                    android:id="@+id/task_view_cancel_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:backgroundTint="#F65050"
+                    android:text="Hủy"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/task_view_save_button"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/task_view_save_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:backgroundTint="#03A9F4"
+                    android:text="Lưu"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/task_view_cancel_button"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

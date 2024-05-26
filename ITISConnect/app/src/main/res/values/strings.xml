@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">ITIS Connect</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="sex_options">
+        <item>Nam</item>
+        <item>Nữ</item>
+    </string-array>
+    <string-array name="department_options">
+        <item>Truyền thông</item>
+        <item>Nội dung</item>
+        <item>Nhân sự</item>
+        <item>Hậu cần</item>
+    </string-array>
+    <string-array name="role_admin_options">
+        <item>Admin</item>
+        <item>User</item>
+    </string-array>
+</resources>
